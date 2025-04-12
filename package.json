@@ -1,0 +1,19 @@
+{
+    "name": "sign-language-video-call",
+    "version": "1.0.0",
+    "description": "A video calling platform with sign language detection",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "peerjs": "node peerjs-server.js"
+    },
+    "dependencies": {
+        "express": "^4.21.2",
+        "peer": "^0.6.1",
+        "socket.io": "^4.8.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
