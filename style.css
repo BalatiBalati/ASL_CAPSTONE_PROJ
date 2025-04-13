@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f4f8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .room-info {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #room-id {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  #leave-btn {
+    background-color: #e74c3c;
+  }
+  
+  #leave-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .call-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .video-container {
+    position: relative;
+  }
+  
+  video {
+    width: 100%;
+    max-height: 400px;
+    background-color: #000;
+    border-radius: 8px;
+  }
+  
+  .user-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .sign-detection-panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sign-detection-panel h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  #detection-results {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    min-height: 50px;
+  }
+  
+  .canvas-container {
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  #detection-canvas {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .call-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .welcome-screen {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-screen h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-screen p {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }

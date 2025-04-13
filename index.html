@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Language Video Call</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Load PeerJS for WebRTC -->
+  <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+  <!-- Load Socket.io -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Load TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sign Language Video Call Platform</h1>
+      <div class="room-info">
+        <input type="text" id="room-id" placeholder="Room ID">
+        <button id="join-btn">Join Room</button>
+        <button id="create-btn">Create New Room</button>
+      </div>
+    </div>
+    
+    <div class="call-container hidden" id="call-container">
+      <div class="video-grid">
+        <div class="video-container">
+          <video id="local-video" autoplay muted></video>
+          <div class="user-label">You</div>
+        </div>
+        <div class="video-container">
+          <video id="remote-video" autoplay></video>
+          <div class="user-label">Remote User</div>
+        </div>
+      </div>
+      
+      <div class="sign-detection-panel">
+        <h3>Sign Language Detection</h3>
+        <div id="detection-results">
+          <p>Waiting for signs to detect...</p>
+        </div>
+        <div class="canvas-container">
+          <canvas id="detection-canvas"></canvas>
+        </div>
+        <div class="controls">
+          <button id="toggle-detection">Turn On Detection</button>
+        </div>
+      </div>
+      
+      <div class="call-controls">
+        <button id="mute-btn">Mute</button>
+        <button id="video-btn">Hide Video</button>
+        <button id="leave-btn">Leave Call</button>
+      </div>
+    </div>
+    
+    <div class="welcome-screen" id="welcome-screen">
+      <h2>Welcome to Sign Language Video Call</h2>
+      <p>Create a new room or join an existing one to start a call.</p>
+      <p>Enable sign language detection during your call to translate signs in real-time.</p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
