@@ -12,6 +12,7 @@ CORS(app)  # Enable cross-origin requests
 # Load YOLOv5 model
 MODEL_PATH = 'best_windows2.pt'  # Path to your model
 model = None
+port = int(os.environ.get('PORT', 5000))
 
 def load_model():
     global model
@@ -73,4 +74,4 @@ def detect_signs():
             })
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+     app.run(host='0.0.0.0', port=port, debug=False)
